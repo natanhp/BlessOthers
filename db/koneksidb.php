@@ -4,22 +4,10 @@
 	$password = "***REMOVED***";
 	$db = "dicodingwebapp";
 
-	// try {
-	// 	$conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
-	// 	$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-	// } catch(Exception $e) {
-	// 		echo "Failed: " . $e;
-	// }
-
-$con = mssql_connect($host, $user, $password);
-if ($con) 
-{
-    echo 'Berhasil konek!';
-}
-else
-{
-    echo 'Koneksi GAGAL!';
-}
-
-echo "Iso bosq";
+	try {
+		$conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
+		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+	} catch(Exception $e) {
+			echo "Failed: " . $e;
+	}
 ?>
