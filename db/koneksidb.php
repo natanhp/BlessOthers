@@ -19,4 +19,6 @@ try {
 	$serverName = "tcp:dicodingdatabase.database.windows.net,1433";
 	$conn = sqlsrv_connect($serverName, $connectionInfo);
 
+	echo "Iso lek";
+
 ?>
