@@ -1,8 +1,5 @@
 <?php
-	$host = "dicodingdatabase.database.windows.net";
-	$user = "natanhp";
 	$password = "***REMOVED***";
-	$db = "dicodingwebapp";
 
 	// PHP Data Objects(PDO) Sample Code:
 try {
