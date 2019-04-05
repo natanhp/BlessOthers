@@ -1,0 +1,22 @@
+body{
+	background-color: #b7a55e;
+}
+.jumbotron{
+	background-color:white !important;
+}
+
+#img_header{
+	width: 250px;
+	height: 250px;
+	float: left;
+  clear: both;
+}
+
+#text_header{
+	margin-top: 60px;
+	margin-left: 25%;
+}
+
+button{
+	background-color: #e06635 !important;
+}
