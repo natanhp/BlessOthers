@@ -3,7 +3,8 @@
 
 	echo $conn;
 
-	// $sql_select = "SELECT * FROM [dbo].[bless]";
+	$sql_select = "SELECT * FROM [dbo].[bless]";
+	echo $sql_select;
     //         $stmt = $conn->query($sql_select);
 	// 		$registrants = $stmt->fetchAll(); 
 
