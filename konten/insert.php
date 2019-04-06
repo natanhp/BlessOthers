@@ -5,7 +5,8 @@
 
 	$sql_select = "SELECT * FROM [dbo].[bless]";
 	echo $sql_select;
-    //         $stmt = $conn->query($sql_select);
+			 $stmt = $conn->query($sql_select);
+			 echo $stmt;
 	// 		$registrants = $stmt->fetchAll(); 
 
 	// 		echo $stmt . $registrants;
