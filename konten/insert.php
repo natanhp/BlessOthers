@@ -8,10 +8,15 @@
 			$nama=$_POST['nama'];
 			$words=$_POST['words'];
 
+			echo $nama;
+			echo $words;
+			
 			$stmt = $conn->prepare($sql_insert);
             $stmt->bindValue(1, $nama);
             $stmt->bindValue(2, $words);
-            $stmt->execute();
+			$stmt->execute();
+			
+			echo $stmt;
 		}catch(Exception $e){
 			echo "Failed: " . $e;
 		}
