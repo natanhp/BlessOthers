@@ -11,14 +11,9 @@
 			echo $nama;
 			echo $words;
 			
-			$sql_insert = "INSERT INTO bless (nama, words) VALUES (?,?)";
-			
-			$stmt = $conn->prepare($sql_insert);
-            $stmt->bindValue(1, $nama);
-            $stmt->bindValue(2, $words);
-			$stmt->execute();
-			
-			echo $stmt;
+			$q = "INSERT INTO bless (nama, words) VALUES (:nama, :words)";
+			$query = $db->prepare($q);
+			$result = $query->execute(array(":nama" => $nama, ":words" => $words));
 		}catch(Exception $e){
 			echo "Failed: " . $e;
 		}
