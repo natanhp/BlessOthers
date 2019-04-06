@@ -11,7 +11,7 @@
 			echo $nama;
 			echo $words;
 			
-			$q = "INSERT INTO bless (nama, words) VALUES (:nama, :words)";
+			$q = "INSERT INTO [dbo].[bless] (nama, words) VALUES (:nama, :words)";
 			$query = $db->prepare($q);
 			$result = $query->execute(array(":nama" => $nama, ":words" => $words));
 		}catch(Exception $e){
