@@ -1,8 +1,8 @@
 <?php
 	include ('../db/koneksidb.php');
 
-	echo $conn;
-
+	echo isset($_POST['submit']);
+	
 	if(isset($_POST['submit'])){
 		try{
 			$nama=$_POST['nama'];
