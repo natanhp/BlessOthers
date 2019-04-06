@@ -22,16 +22,16 @@
 					</div>
 		</header>
 		<div class="container">
-			<form action="" method="POST">
+			<form action="konten/insert.php" method="POST">
 				<div class="form-group">
 					<label for="nama">Nama: </label>
-					<input type="text" class="form-control" id="nama" placeholder="Name">
+					<input type="text" class="form-control" id="nama" name="nama" placeholder="Name">
 				</div>
 				<div class="form-group">
 					<label for="words">Words: </label>
-    			<textarea class="form-control" id="words" rows="3"></textarea>
+    			<textarea class="form-control" id="words" name="words" rows="3"></textarea>
 				</div>
-				<button type="submit" class="btn btn-primary">Be a blessing!</button>
+				<button type="submit" name="submit" class="btn btn-primary">Be a blessing!</button>
 			</form>
 		</div>
 	</body>
