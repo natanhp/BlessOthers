@@ -1,5 +1,5 @@
 <?php
-	include('db/koneksidb.php');
+	include 'db/koneksidb.php';
 
 	if(isset($_POST['submit'])){
 		try{
