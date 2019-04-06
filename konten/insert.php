@@ -3,15 +3,15 @@
 
 	echo $conn;
 
-	$sql_select = "SELECT * FROM [dbo].[bless]";
-            $stmt = $conn->query($sql_select);
-			$registrants = $stmt->fetchAll(); 
+	// $sql_select = "SELECT * FROM [dbo].[bless]";
+    //         $stmt = $conn->query($sql_select);
+	// 		$registrants = $stmt->fetchAll(); 
 
-			echo $stmt . $registrants;
+	// 		echo $stmt . $registrants;
 			
-			foreach($registrants as $test){
-				echo $test['nama'] . $test['words'];
-			}
+	// 		foreach($registrants as $test){
+	// 			echo $test['nama'] . $test['words'];
+	// 		}
 
 	// if(isset($_POST['submit'])){
 	// 	try{
