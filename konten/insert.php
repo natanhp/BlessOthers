@@ -13,6 +13,8 @@
 			$statement->execute();
 		}catch(Exception $e){
 			echo "Failed: " . $e;
+		}default{
+			echo "Sukses";
 		}
 	}
 ?>
