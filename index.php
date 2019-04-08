@@ -48,7 +48,7 @@
 			$stmt = $conn->query($sql_select);
 			$posts = $stmt->fetchAll(); 
 			if(count($posts) > 0) {
-				echo '<table class="table">';
+				echo '<table class="table container">';
 				echo "<thead>";
 				echo "<tr>";
 				echo '<th scope="col">Name</th>';
@@ -76,14 +76,6 @@
 			$nama=$_POST['nama'];
 			$words=$_POST['words'];
 
-			echo $nama;
-			echo $words;
-			
-			// $query = "INSERT INTO bless (nama, words) VALUES (:nama, :words)";
-			// $query = $conn->prepare($q);
-			// $result = $query->execute(array(":nama" => $nama, ":words" => $words));
-
-			
 			$sql_insert = "INSERT INTO bless (nama, words) VALUES (?,?)";
 			$stmt = $conn->prepare($sql_insert);
 			$stmt->bindValue(1, $nama);
