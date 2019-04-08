@@ -50,7 +50,7 @@
 			echo $nama;
 			echo $words;
 			
-			$q = "INSERT INTO [dbo].[bless] (nama, words) VALUES (:nama, :words)";
+			$query = "INSERT INTO [dbo].[bless] (nama, words) VALUES (:nama, :words)";
 			$query = $conn->prepare($q);
 			$result = $query->execute(array(":nama" => $nama, ":words" => $words));
 
