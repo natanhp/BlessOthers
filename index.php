@@ -48,7 +48,8 @@
 			$stmt = $conn->query($sql_select);
 			$posts = $stmt->fetchAll(); 
 			if(count($posts) > 0) {
-				echo '<table class="table container">';
+				echo '<div class="container">';
+				echo '<table class="table">';
 				echo "<thead>";
 				echo "<tr>";
 				echo '<th scope="col">Name</th>';
@@ -63,6 +64,7 @@
 				}
 				echo "</tbody>";
 				echo "</table>";
+				echo "</div>";
 			}
 		} catch(Exception $e) {
 				echo "Failed: " . $e;
