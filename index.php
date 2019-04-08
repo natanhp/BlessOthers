@@ -22,7 +22,7 @@
 					</div>
 		</header>
 		<div class="container">
-			<form action="konten/insert.php" method="POST">
+			<form action="index.php" method="POST">
 				<div class="form-group">
 					<label for="nama">Nama: </label>
 					<input type="text" class="form-control" id="nama" name="nama" placeholder="Name">
@@ -38,3 +38,25 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </html>
+
+<?php
+	include('db/koneksidb.php');
+	
+	if(isset($_POST['submit'])){
+		try{
+			$nama=$_POST['nama'];
+			$words=$_POST['words'];
+
+			echo $nama;
+			echo $words;
+			
+			$q = "INSERT INTO [dbo].[bless] (nama, words) VALUES (:nama, :words)";
+			$query = $db->prepare($q);
+			$result = $query->execute(array(":nama" => $nama, ":words" => $words));
+
+			
+		}catch(Exception $e){
+			echo "Failed: " . $e;
+		}
+	}
+?>
