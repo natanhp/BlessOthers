@@ -41,6 +41,35 @@
 
 <?php
 	include('db/koneksidb.php');
+
+	function getData(){
+		try {
+			$sql_select = "SELECT nama, words FROM bless";
+			$stmt = $conn->query($sql_select);
+			$posts = $stmt->fetchAll(); 
+			if(count($posts) > 0) {
+				echo '<table class="table">';
+				echo "<thead>";
+				echo "<tr>";
+				echo '<th scope="col">Name</th>';
+				echo '<th scope="col">Words</th>';
+				echo "</tr>";
+				echo "</thead>";
+				echo "<tbody>";
+				foreach($posts as $post) {
+					echo "<tr>";
+					echo "<td>".$post['nama']."</td>";
+					echo "<td>".$post['words']."</td>";
+				}
+				echo "</tbody>";
+				echo "</table>";
+			}
+		} catch(Exception $e) {
+				echo "Failed: " . $e;
+		}
+	}
+
+	getData();
 	
 	if(isset($_POST['submit'])){
 		try{
@@ -60,6 +89,8 @@
 			$stmt->bindValue(1, $nama);
 			$stmt->bindValue(2, $words);
 			$stmt->execute();
+
+			getData();
 		}catch(Exception $e){
 			echo "Failed: " . $e;
 		}
