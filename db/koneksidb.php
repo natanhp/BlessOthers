@@ -11,8 +11,8 @@ try {
 		die(print_r($e));
 	}
 
-	// SQL Server Extension Sample Code:
-	$connectionInfo = array("UID" => "natanhp@dicodingdatabase", "pwd" => $password, "Database" => "dicodingwebapp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-	$serverName = "tcp:dicodingdatabase.database.windows.net,1433";
-	$conn = sqlsrv_connect($serverName, $connectionInfo);
+	// // SQL Server Extension Sample Code:
+	// $connectionInfo = array("UID" => "natanhp@dicodingdatabase", "pwd" => $password, "Database" => "dicodingwebapp", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+	// $serverName = "tcp:dicodingdatabase.database.windows.net,1433";
+	// $conn = sqlsrv_connect($serverName, $connectionInfo);
 ?>
