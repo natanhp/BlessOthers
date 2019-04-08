@@ -42,7 +42,7 @@
 <?php
 	include('db/koneksidb.php');
 
-	function getData(){
+	function getData($conn){
 		try {
 			$sql_select = "SELECT nama, words FROM bless";
 			$stmt = $conn->query($sql_select);
@@ -69,7 +69,7 @@
 		}
 	}
 
-	getData();
+	getData($conn);
 	
 	if(isset($_POST['submit'])){
 		try{
@@ -90,7 +90,7 @@
 			$stmt->bindValue(2, $words);
 			$stmt->execute();
 
-			getData();
+			getData($conn);
 		}catch(Exception $e){
 			echo "Failed: " . $e;
 		}
