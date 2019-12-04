@@ -1,5 +1,5 @@
 <?php
-	$password = "***REMOVED***";
+	$password = "";
 
 	// PHP Data Objects(PDO) Sample Code:
 try {
