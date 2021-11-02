@@ -1,2 +1,4 @@
-# BlessOthers
-Website untuk berbagi berkat kepada orang lain melalui kata-kata positif. Dibuat untuk memenuhi submission 1 Kelas Menjadi Azure Developer Dicoding.
+# Bless Others
+![Preview](screenshot/Sceenshot.png)
+Website to bless other people through positive words. This project is my final submission for Kelas Menjadi Azure Developer Dicofing.
+
